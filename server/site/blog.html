@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/blog.css">
+    <!-- java script -->
+    <script defer src="./assets/javaScript/blog/blog.js"></script>
+    <!-- ####### DO NOT TOUCH from here down!!! ####### -->
+    <!-- bootstrap CSSheet ##### change link on the streets -->
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script defer src="./jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap  -->
+    <script defer src="./bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <h1>JC's Blog Spot</h1>
+    </section>
+    <main>
+        <div class="welcome_div">
+            <h2>Thanks for stopping in!</h2>
+            <p></p>
+        </div>
+        <!-- modal -->
+        <div>
+            <!-- modal-trigger "create blog" -->
+            <button id="modal_trigger" type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                data-bs-target="#blog">Create Blog</button>
+            <!-- Modal for "create blog" -->
+            <div id="blog" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- modal-header -->
+                        <div class="modal-header">
+                            <h5 id="modal_title" class="modal-title">JC's Blog Spot</h5>
+                            <button type="button" id="modal_close" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- modal-body -->
+                        <div class="modal-body">
+                            <form id="new_post" action="" method="POST">
+                                <!-- title -->
+                                <label class="form-label" for="blog_title">Title:</label>
+                                <input id="blog_title" class="form-control" type="text" placeholder="Enter Title Here"
+                                    name="blogTitle">
+                                <!-- date -->
+                                <label class="form-label" for="blog_date">Date:</label>
+                                <input id="blog_date" class="form-control" type="date" placeholder="Enter Date Here"
+                                    name="blogDate">
+                                <!-- image -->
+                                <label class="form-label" for="blog_img">Image Upload:</label>
+                                <input id="blog_img" class="form-control" name="" type="file" accept="image/*" multiple>
+                                <!-- video -->
+                                <label for="blog_video">Video Upload:</label>
+                                <input id="blog_video" class="form-control" name="" type="file" accept="video/*"
+                                    multiple>
+                                <!-- audio -->
+                                <label for="blog_audio">Audio Upload:</label>
+                                <input id="blog_audio" class="form-control" name="" type="file" accept="audio/*"
+                                    multiple>
+                                <textarea id="blog_txt" name="blog_txt" cols="60" rows="15"
+                                    placeholder="Enter Text Here!"></textarea>
+                                <!-- modal-footer -->
+                                <div class="modal-footer">
+                                    <button id="create_post" class="btn btn-primary">Post</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div id="blog_root" style="width: 100%; padding:10px; border: solid blac 2px;"></div>
+    </aside>
+</body>
+
+</html>

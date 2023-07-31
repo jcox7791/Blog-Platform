@@ -1,0 +1,102 @@
+body {
+  background-image: linear-gradient(to right, green, whitesmoke, orange);
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "sec sec sec sec sec sec"
+    "main main main main aside aside"
+    "footer footer footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+.nav_con {
+  background-color: gainsboro;
+  display: flex;
+  padding: 5px;
+}
+.img_nav {
+  height: 75px;
+  width: 150px;
+}
+.nav_links {
+  margin-top: 25px;
+}
+a:link {
+  margin-left: 10px;
+  text-decoration: none;
+}
+section {
+  grid-area: sec;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: sec_title;
+  text-align: center;
+}
+@keyframes sec_title {
+  20% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+h1 {
+  font-family: segoe script;
+  font-size: 80px !important;
+  text-shadow: 5px 5px 8px rgb(255, 60, 0);
+}
+main {
+  grid-area: main;
+  background-color: rgba(0, 0, 0, 0.582);
+  
+}
+.welcome_div{
+  color: whitesmoke;
+}
+#modal_trigger {
+  font-family: segoe script;
+}
+#modal_title {
+  font-family: segoe script;
+  font-size: 30px;
+  text-shadow: 5px 5px 8px rgb(255, 60, 0);
+}
+#blog_txt {
+  margin-top: 10px;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+  background-color: gainsboro;
+  bottom: 0;
+  min-width: 100%;
+  position: fixed;
+  display: grid;
+  grid-template-areas: "social  social terms terms contact contact";
+}
+#social_media {
+  grid-area: social;
+  margin-left: 10px;
+}
+.footer_icons {
+  margin-top: -30px;
+  height: 35px;
+}
+#creator_terms {
+  grid-area: terms;
+  text-align: center;
+  margin-top: 10px;
+}
+.terms {
+  margin-top: -25px;
+}
+#contact_info {
+  grid-area: contact;
+  text-align: center;
+}
+.contacts {
+  margin-top: -25px;
+  margin-left: 20px;
+}
